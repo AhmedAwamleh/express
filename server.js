@@ -25,11 +25,13 @@ app.post('/person', (req, res) => {
     const { name, age, gender } = req.body // get data (email and passord from body)
     const newAge = parseInt(age) + 5
     console.log(name, gender, newAge)
+
     res.status(201).json({ //for send data back with new thing like id 
 
 
         newAge: newAge.toString(),
         name: name
+
     })
 
 })
